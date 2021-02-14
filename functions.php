@@ -21,7 +21,7 @@ function add_newsletter_section(){
     $newsletter_page = get_page_by_title('Newsletter-Anmeldung', OBJECT, 'page');
 
     ?>
-    <section id="newsletter_section" class="newsletter_section section-padding onepage-section">
+    <section id="newsletter" class="section-newsletter section-padding onepage-section">
         <div class="container">
             <div class="section-title-area">
                 <h2 class="section-title"><?php echo apply_filters( 'the_title', $newsletter_page->post_title ); ?></h2>
