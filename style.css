@@ -12,5 +12,31 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+/*
+ Footer menu for administrative links.
+ Source: https://lorepirri.com/onepress-wp-theme-add-footer-menu.html
+ Code:   https://gist.github.com/lorepirri/e887aa37a060a7d2691b3c2cc730c8dc
+*/
+
+.footer-menu-container { display: block; width:100%; margin-bottom: 12px; }
+.footer-menu-container ul { display: inline; padding-left: 0px; }
+.footer-menu-container li { list-style-type: none; display: inline; }
+
+.footer-menu-container li:before {
+	content: "\007C";
+	font-family: FontAwesome;
+    margin-left: 6px;
+	margin-right: 8px;
+}
+
+.footer-menu-container li:first-of-type:before {
+	content: none;
+	margin-right: 0;
+}
+
+.footer-menu-container li:last-of-type {
+	margin-right: 0;
+}
+
 /* Add your custom css below
 -------------------------------------------------------------- */
