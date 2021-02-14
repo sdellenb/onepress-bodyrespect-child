@@ -19,7 +19,6 @@ function onepress_child_enqueue_styles() {
  */
 function add_newsletter_section(){
     $newsletter_page = get_page_by_title('Newsletter', OBJECT, 'page');
-
     ?>
     <section id="newsletter" class="section-newsletter section-padding onepage-section">
         <div class="container">
@@ -27,14 +26,41 @@ function add_newsletter_section(){
                 <h2 class="section-title"><?php echo apply_filters( 'the_title', $newsletter_page->post_title ); ?></h2>
             </div>
             <div class="row">
-            <?php echo apply_filters( 'the_content', $newsletter_page->post_content ); ?>
+                <!-- Copied from the about section's HTML code -->
+                <div class="col-lg-12 col-sm-12  wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+                    <?php echo apply_filters( 'the_content', $newsletter_page->post_content ); ?>
+                </div>
             </div>
         </div>
     </section>
     <?php
 }
-add_action( 'onepress_after_section_about', 'add_newsletter_section'  );
+add_action( 'onepress_after_section_about', 'add_newsletter_section' );
 
+/**
+ * Hook to add custom section after team section
+ *
+ * @see wp-content/themes/onepress/template-frontpage.php
+ */
+function add_donations_section(){
+    $donations_page = get_page_by_title('Spenden', OBJECT, 'page');
+    ?>
+    <section id="donations" class="section-donations section-padding onepage-section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title"><?php echo apply_filters( 'the_title', $donations_page->post_title ); ?></h2>
+            </div>
+            <div class="row">
+                <!-- Copied from the about section's HTML code -->
+                <div class="col-lg-12 col-sm-12  wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+                    <?php echo apply_filters( 'the_content', $donations_page->post_content ); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+}
+add_action( 'onepress_after_section_team', 'add_donations_section' );
 
 /*
  Footer menu for administrative links.
