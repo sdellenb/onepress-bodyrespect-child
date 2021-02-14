@@ -17,27 +17,24 @@ function onepress_child_enqueue_styles() {
  *
  * @see wp-content/themes/onepress/template-frontpage.php
  */
+function add_newsletter_section(){
+    $newsletter_page = get_page_by_title('Newsletter-Anmeldung', OBJECT, 'page');
 
-/*
-function add_my_custom_section(){
     ?>
-    <section id="my_section" class="my_section section-padding onepage-section">
+    <section id="newsletter_section" class="newsletter_section section-padding onepage-section">
         <div class="container">
             <div class="section-title-area">
-                <h5 class="section-subtitle"> My section subtitle</h5>
-                <h2 class="section-title"> My section title</h2>
+                <h2 class="section-title"><?php echo apply_filters( 'the_title', $newsletter_page->post_title ); ?></h2>
             </div>
             <div class="row">
-                <!-- Your section content here, you can use bootstrap 4 elements :) -->
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-
+            <?php echo apply_filters( 'the_content', $newsletter_page->post_content ); ?>
             </div>
         </div>
     </section>
     <?php
 }
-add_action( 'onepress_after_section_about', 'add_my_custom_section'  );
-*/
+add_action( 'onepress_after_section_about', 'add_newsletter_section'  );
+
 
 /*
  Footer menu for administrative links.
