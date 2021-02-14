@@ -18,7 +18,7 @@ function onepress_child_enqueue_styles() {
  * @see wp-content/themes/onepress/template-frontpage.php
  */
 function add_newsletter_section(){
-    $newsletter_page = get_page_by_title('Newsletter-Anmeldung', OBJECT, 'page');
+    $newsletter_page = get_page_by_title('Newsletter', OBJECT, 'page');
 
     ?>
     <section id="newsletter" class="section-newsletter section-padding onepage-section">
