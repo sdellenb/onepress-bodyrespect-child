@@ -40,3 +40,23 @@
 
 /* Add your custom css below
 -------------------------------------------------------------- */
+
+/* No UPPERCASE in the contact form text, because we're not screaming. */
+p.datenschutz {
+	text-transform: none;
+}
+
+/* Moved from the customizer to the theme CSS */
+body {
+	color: black;
+	font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+}
+
+.cn-button-custom {
+	color: black !important;
+	background: #ff8e6a !important;
+}
