@@ -42,24 +42,25 @@ add_action( 'onepress_after_section_about', 'add_newsletter_section' );
  *
  * @see wp-content/themes/onepress/template-frontpage.php
  */
-function add_feedback_section(){
+function add_contact_section(){
+    $contact_page = get_page_by_title('Kontakt', OBJECT, 'page');
     ?>
-    <section id="feedback" class="section-feedback section-padding onepage-section">
+    <section id="contact" class="section-contact section-padding onepage-section">
         <div class="container">
-            <div class="section-title-area" style="margin-bottom: 0">
-                <h2 class="section-title"><?php echo apply_filters( 'the_title', 'Anonymes Feedback' ); ?></h2>
+            <div class="section-title-area">
+                <h2 class="section-title"><?php echo apply_filters( 'the_title', $contact_page->post_title ); ?></h2>
             </div>
             <div class="row">
                 <!-- Copied from the about section's HTML code -->
                 <div class="col-lg-12 col-sm-12  wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
-                    <?php echo apply_filters( 'the_content', '[contact-form-7 id="238" title="Anonymes Kontaktformular"]' ); ?>
+                <?php echo apply_filters( 'the_content', $contact_page->post_content ); ?>
                 </div>
             </div>
         </div>
     </section>
     <?php
 }
-add_action( 'onepress_after_section_team', 'add_feedback_section' );
+add_action( 'onepress_after_section_team', 'add_contact_section' );
 
 /**
  * Hook to add custom section after team section
