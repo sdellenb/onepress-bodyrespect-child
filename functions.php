@@ -43,17 +43,17 @@ add_action( 'onepress_after_section_about', 'add_newsletter_section' );
  * @see wp-content/themes/onepress/template-frontpage.php
  */
 function add_contact_section(){
-    $contact_page = get_page_by_title('Kontakt', OBJECT, 'page');
+    $kontakt_page = get_page_by_title('Kontakt', OBJECT, 'page');
     ?>
-    <section id="contact" class="section-contact section-padding onepage-section">
+    <section id="kontakt" class="section-kontakt section-padding onepage-section">
         <div class="container">
             <div class="section-title-area">
-                <h2 class="section-title"><?php echo apply_filters( 'the_title', $contact_page->post_title ); ?></h2>
+                <h2 class="section-title"><?php echo apply_filters( 'the_title', $kontakt_page->post_title ); ?></h2>
             </div>
             <div class="row">
                 <!-- Copied from the about section's HTML code -->
                 <div class="col-lg-12 col-sm-12  wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
-                <?php echo apply_filters( 'the_content', $contact_page->post_content ); ?>
+                <?php echo apply_filters( 'the_content', $kontakt_page->post_content ); ?>
                 </div>
             </div>
         </div>

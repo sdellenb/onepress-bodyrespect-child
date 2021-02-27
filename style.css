@@ -41,9 +41,16 @@
 /* Add your custom css below
 -------------------------------------------------------------- */
 
+/* Contact Form 7 */
+
 /* No UPPERCASE in the contact form text, because we're not screaming. */
 p.datenschutz {
 	text-transform: none;
+	letter-spacing: 1px;
+}
+
+input.wpcf7-submit {
+	color: black;
 }
 
 /* Moved from the customizer to the theme CSS */
