@@ -42,6 +42,31 @@ add_action( 'onepress_after_section_about', 'add_newsletter_section' );
  *
  * @see wp-content/themes/onepress/template-frontpage.php
  */
+function add_team_section(){
+    $team_page = get_page_by_title('Unser Team', OBJECT, 'page');
+    ?>
+    <section id="kontakt" class="section-team section-padding onepage-section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title"><?php echo apply_filters( 'the_title', $team_page->post_title ); ?></h2>
+            </div>
+            <div class="row">
+                <!-- Copied from the about section's HTML code -->
+                <div class="col-lg-12 col-sm-12  wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+                <?php echo apply_filters( 'the_content', $team_page->post_content ); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+}
+add_action( 'onepress_after_section_team', 'add_team_section' );
+
+/**
+ * Hook to add custom section after team section
+ *
+ * @see wp-content/themes/onepress/template-frontpage.php
+ */
 function add_contact_section(){
     $kontakt_page = get_page_by_title('Kontakt', OBJECT, 'page');
     ?>
