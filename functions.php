@@ -1,5 +1,13 @@
 <?php
 /**
+ * General Wordpress Theme Functions
+ */
+
+// Gutenberg custom stylesheet
+add_theme_support( 'editor-styles' );
+add_editor_style( 'editor-style.css' );
+
+/**
  * OnePress Child Theme Functions
  *
  */
