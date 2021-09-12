@@ -1,0 +1,4 @@
+/* Adopted from body font-size in style.css */ 
+.editor-styles-wrapper p {
+    font-size: 1.25rem;
+}
