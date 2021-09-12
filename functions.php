@@ -8,6 +8,16 @@ add_theme_support( 'editor-styles' );
 add_editor_style( 'editor-style.css' );
 
 /**
+ * Rewrite the default "author" slug in paths.
+ * It is blocked by WP-Cerber anyways and will return 404.
+ */
+function new_author_base() {
+    global $wp_rewrite;
+    $wp_rewrite->author_base = 'team';
+}
+add_action('init', 'new_author_base');
+
+/**
  * OnePress Child Theme Functions
  *
  */
