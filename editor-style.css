@@ -1,4 +1,5 @@
-/* Adopted from body font-size in style.css */ 
-.editor-styles-wrapper p {
+/* Adopted from body font-size in style.css */
+/* For more information on how I got here, see https://css-tricks.com/getting-the-wordpress-block-editor-to-look-like-the-front-end-design/ */
+p.rich-text.block-editor-rich-text__editable {
     font-size: 1.25rem;
 }
