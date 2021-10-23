@@ -3,3 +3,16 @@
 p.rich-text.block-editor-rich-text__editable {
     font-size: 1.25rem;
 }
+
+figure.wp-block-pullquote {
+    border-bottom: 4px solid currentColor;
+    border-top: 4px solid currentColor;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 0 0;
+}
+
+.wp-block-pullquote blockquote p {
+    font-size: 1.5rem;
+    font-style: italic;
+}

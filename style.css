@@ -67,3 +67,18 @@ h1, h2, h3, h4, h5, h6 {
 	color: black !important;
 	background: #ff8e6a !important;
 }
+
+/* Tone down the Pull Quote size */
+
+figure.wp-block-pullquote {
+	padding: 0 0;
+}
+
+.entry-content blockquote {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.wp-block-pullquote p {
+	font-size: 1.5rem;
+}
