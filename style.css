@@ -82,3 +82,9 @@ figure.wp-block-pullquote {
 .wp-block-pullquote p {
 	font-size: 1.5rem;
 }
+
+/* Videos are always huge with Gutenberg, add an optional class */
+
+figure.wp-block-video video {
+	width: 50%;
+}
