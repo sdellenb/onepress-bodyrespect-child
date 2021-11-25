@@ -78,7 +78,7 @@ function add_team_section(){
     </section>
     <?php
 }
-add_action( 'onepress_after_section_team', 'add_team_section' );
+add_action( 'onepress_after_section_services', 'add_team_section' );
 
 /**
  * Hook to add custom section after team section
@@ -103,7 +103,7 @@ function add_contact_section(){
     </section>
     <?php
 }
-add_action( 'onepress_after_section_team', 'add_contact_section' );
+add_action( 'onepress_after_section_services', 'add_contact_section' );
 
 /**
  * Hook to add custom section after team section
@@ -128,7 +128,7 @@ function add_donations_section(){
     </section>
     <?php
 }
-add_action( 'onepress_after_section_team', 'add_donations_section' );
+add_action( 'onepress_after_section_services', 'add_donations_section' );
 
 /*
  Footer menu for administrative links.
