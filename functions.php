@@ -46,7 +46,7 @@ add_action( 'onepress_after_section_about', 'add_newsletter_section' );
  * @see wp-content/themes/onepress/template-frontpage.php
  */
 function add_team_section(){
-    add_page_as_section('Unser Team', 'team');
+    add_page_as_section('Team', 'team');
 }
 add_action( 'onepress_after_section_services', 'add_team_section' );
 
